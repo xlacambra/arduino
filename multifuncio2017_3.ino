@@ -7,6 +7,9 @@
 /*Canvi d'estat d'un Led per pulsació d'un polsador
   A cada pulsació es canvia de estat (encés-apagat)
   No importa el temps que dura cada polsacio.
+  Un interruptor general encen i apaga totos els leds a l'hora amb indepedencia
+  del deu estat previ.
+  No obstant, si estant apagats, amb els polsadors es poden encendre i apagar.
 */
 
 const int polsadorBlau = 2;//conexió polsador blau
