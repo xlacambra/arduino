@@ -3,7 +3,7 @@
 
 
 
-////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 /*Canvi d'estat d'un Led per pulsació d'un polsador
   A cada pulsació es canvia de estat (encés-apagat)
   No importa el temps que dura cada polsacio.
@@ -54,12 +54,16 @@ void loop() {
     Serial.println(previEstatSw);
   }  
   
-    //Serial.println(estatSw);
+  //Serial.println(estatSw);
     //Serial.println(previEstatSw);
     if(estatSw == LOW && previEstatSw == HIGH){
       digitalWrite (ledPinBlau,LOW);
       digitalWrite (ledPinGroc,LOW);
       previEstatSw = estatSw;
+      Serial.print("estatSw_LH");
+      Serial.println(estatSw);
+      Serial.println("previEstatSw_LH");
+      Serial.println(previEstatSw);
       delay(100);
     } 
     if(estatSw == LOW && previEstatSw == LOW){
@@ -76,7 +80,7 @@ void loop() {
         }
       } 
       previEstatPolsadorBlau = estatPolsadorBlau;
-   
+     
   
       
  
